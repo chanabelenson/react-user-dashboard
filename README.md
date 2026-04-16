@@ -1,16 +1,31 @@
-# React + Vite
+React Users Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured React SPA that simulates a real-world user management system using a local JSON Server as a REST API backend.
 
-Currently, two official plugins are available:
+The project is based on a structured dataset similar to jsonplaceholder and demonstrates advanced frontend development practices including authentication, routing, state management, and asynchronous data handling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Stack
 
-## React Compiler
+React · React Router v6 · JavaScript (ES6+) · Fetch API · JSON Server
+React Hooks · Context API · Async/Await · Custom Hooks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Core Features
+Authentication System
+Login & registration flow with persistent session storage.
+User Dashboard
+Central hub with navigation to user-related data and actions.
+Todos Management
+Full CRUD operations with filtering, sorting, and status tracking.
+Posts & Comments
+Create, edit, and delete posts with nested comments system and user-based permissions.
+Albums & Photos
+Dynamic album browsing with incremental photo loading and full media management.
+Architecture Highlights
+Modular component-based structure
+Global state management using Context API
+Protected routing with React Router v6
+Optimized API calls and client-side data handling
+Reusable custom hooks for logic separation
+Project Goal
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To simulate a scalable frontend system working with REST APIs, while applying modern React patterns and best practices in real application architecture.
