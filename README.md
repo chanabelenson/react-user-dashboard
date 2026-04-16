@@ -1,4 +1,6 @@
 React Users Management System
+“The system is based on a local JSON Server (fake REST API), so some of the functionality is not active in the GitHub Pages environment due to the lack of an active backend server. In the local project, all services are running normally.”
+
 
 A full-featured React SPA that simulates a real-world user management system using a local JSON Server as a REST API backend.
 
