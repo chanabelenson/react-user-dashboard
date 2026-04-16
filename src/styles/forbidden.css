@@ -1,0 +1,46 @@
+.forbidden-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.forbidden-card {
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    max-width: 450px;
+}
+
+.forbidden-title {
+    font-size: 3rem;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.forbidden-subtitle {
+    margin-bottom: 20px;
+}
+
+.forbidden-text {
+    color: #666;
+}
+
+.forbidden-bold-text {
+    font-weight: bold;
+}
+
+.forbidden-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}

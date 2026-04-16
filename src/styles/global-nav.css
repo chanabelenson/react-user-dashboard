@@ -1,0 +1,27 @@
+/* עיצוב גלובלי לנאב קבוע */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* התאמה לכל העמודים עם הנאב הקבוע */
+.posts-container,
+.todos-page,
+.albums-page,
+.main-content {
+    margin-left: 240px !important;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .posts-container,
+    .todos-page,
+    .albums-page,
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+}

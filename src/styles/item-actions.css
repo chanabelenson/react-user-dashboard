@@ -1,0 +1,104 @@
+.item-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    transition: all 0.2s;
+}
+
+.edit-btn:hover {
+    transform: scale(1.2);
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+}
+
+.edit-section, .edit-section h4, .delete-section h3 {
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.delete-section p {
+    color: #374151;
+    margin-bottom: 10px;
+}
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    background: #f9fafb;
+}
+
+.field-group {
+    margin-bottom: 10px;
+}
+
+.field-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #374151;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.update-btn {
+    background: #10b981;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.update-btn:hover {
+    background: #059669;
+}
+
+.confirm-delete-btn {
+    background: #ef4444;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.confirm-delete-btn:hover {
+    background: #dc2626;
+}
+
+.cancel-btn {
+    background: #6b7280;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #4b5563;
+}
+
+.update-btn:disabled, .confirm-delete-btn:disabled, .cancel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

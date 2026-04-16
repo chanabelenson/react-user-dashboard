@@ -1,0 +1,31 @@
+/* Comments Section */
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.comment {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.comment strong {
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.comment p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.comment small {
+    color: #666;
+    font-style: italic;
+}

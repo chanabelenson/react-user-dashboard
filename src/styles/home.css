@@ -1,0 +1,515 @@
+/* פריסה כללית של עמוד הבית - התאמה לצבעי ה-Todos */
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* הרקע המרכזי של כל האפליקציה */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+/* כותרת עליונה - מעוצבת עם שקיפות (Glassmorphism) */
+.home-layout header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-layout header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-layout header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #f0f0f0;
+}
+
+/* מעטפת התוכן */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* תפריט צד - Sidebar מותאם לסגנון המודרני */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* עיצוב אחיד לכפתורים ולינקים בתפריט הצד */
+.sidebar-btn, .sidebar a {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    display: block;
+    padding: 1rem 2rem;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.sidebar-btn:hover, .sidebar a:hover {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    color: #667eea;
+    padding-left: 2.5rem;
+}
+
+/* עיצוב לקישור פעיל */
+.sidebar a.active {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    padding-left: 2.5rem;
+    border-radius: 0 25px 25px 0;
+    margin-right: 10px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.sidebar a.active:hover {
+    background: linear-gradient(90deg, #5a6fd8, #6a4190);
+    color: white;
+}
+
+/* כפתור Logout מיוחד */
+.logout-container {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 2rem;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+    transition: transform 0.2s;
+}
+
+.logout-btn:hover {
+    transform: scale(1.02);
+}
+
+/* האזור המרכזי */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    /* הסרת הרקע הלבן כדי לראות את ה-Gradient של ה-layout */
+}
+
+/* עיצוב כללי לכל העמודים */
+@import url('./global-nav.css');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* עיצוב עמוד הבית */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    margin: 0;
+}
+
+.home-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+    font-size: 1.3rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+.home-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #718096;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.home-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: #718096;
+    line-height: 1.5;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .home-content {
+        padding: 2rem 1rem
+    }
+    
+    .home-title {
+        font-size: 2.5rem;
+    }
+    
+    .home-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .home-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
+
+/* --- התאמת המודל (Info) לעיצוב ה-Gradient --- */
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.company-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* מודל לוגאאוט */
+.logout-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.logout-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.logout-modal h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.logout-modal .warning-text {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.logout-modal .modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logout-modal .btn-confirm {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-modal .btn-cancel {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-modal .btn-confirm:hover {
+    background: #c82333;
+}
+
+.logout-modal .btn-cancel:hover {
+    background: #5a6268;
+}
+/* שכבת הרקע הכהה - מכסה את כל המסך */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* רקע שחור חצי שקוף */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* ערך גבוה כדי שיופיע מעל הכל */
+  backdrop-filter: blur(3px); /* אפקט טשטוש קל לרקע */
+}
+
+/* החלון הלבן המרכזי */
+.modal-content {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: modalAppear 0.3s ease-out; /* אנימציית כניסה */
+  color: #333;
+}
+
+/* כפתור ה-X לסגירה */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+/* כותרת המודל */
+.modal-content h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+/* חלוקה לסקציות (מידע כללי, כתובת, חברה) */
+.info-sections section {
+  margin-bottom: 20px;
+}
+
+.info-sections h4 {
+  margin-bottom: 8px;
+  color: #3498db; /* צבע כחול לכותרות המשנה */
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.info-sections p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* עיצוב מיוחד לחלק של ה-Company (כרטיס קטן) */
+.company-card {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-right: 4px solid #3498db; /* פס קישוט בצד */
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* אנימציית כניסה מלמעלה למטה */
+@keyframes modalAppear {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* אנימציות */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-30px) rotate(180deg); 
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .home-content {
+        padding: 2rem 1rem;
+    }
+    
+    .home-title {
+        font-size: 2.5rem;
+    }
+    
+    .home-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .welcome-text {
+        font-size: 1.2rem;
+    }
+    
+    .home-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,271 @@
+/* ייבוא קבצי CSS */
+@import url('./forms.css');
+@import url('./post-card.css');
+@import url('./post-details.css');
+@import url('./comments.css');
+@import url('./search.css');
+@import url('./modals.css');
+
+/* עיצובים ייחודיים לעמוד הפוסטים */
+.posts-page {
+    animation: fadeIn 0.8s ease-out;
+    background: transparent;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+.posts-title {
+    color: #1a202c;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.posts-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.add-post-section {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+.add-post-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+}
+
+.add-post-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s;
+}
+
+.add-post-btn:hover::before {
+    left: 100%;
+}
+
+.add-post-btn:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.load-more-btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.3);
+    font-size: 1rem;
+    margin: 30px auto;
+    display: block;
+    min-width: 150px;
+}
+
+.load-more-btn:hover {
+    background: linear-gradient(135deg, #3182ce 0%, #0bc5ea 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+}
+
+.posts-grid {
+    animation: slideUp 0.6s ease-out;
+}
+
+.post-card {
+    animation: fadeIn 0.6s ease-out;
+    animation-delay: calc(var(--index, 0) * 0.1s);
+}
+
+/* מודל אישור יציאה */
+.logout-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    backdrop-filter: blur(15px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.logout-modal {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    padding: 50px 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.4s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.logout-modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+.logout-modal h3 {
+    color: #1a202c;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.logout-modal h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.logout-modal p {
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.warning-text {
+    color: #e53e3e;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 35px;
+    padding: 15px;
+    background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+    border-radius: 12px;
+    border: 1px solid #fc8181;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-confirm {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(245, 101, 101, 0.3);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    min-width: 140px;
+}
+
+.btn-confirm::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-confirm:hover::before {
+    left: 100%;
+}
+
+.btn-confirm:hover {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(245, 101, 101, 0.4);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.3);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    min-width: 140px;
+}
+
+.btn-cancel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-cancel:hover::before {
+    left: 100%;
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(135deg, #3182ce 0%, #0bc5ea 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+}

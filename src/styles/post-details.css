@@ -1,0 +1,207 @@
+/* עיצוב עמוד פוסט בודד */
+.post-details {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e2e8f0;
+}
+
+.post-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 25%, #f093fb 75%, #f5576c 100%);
+}
+
+.post-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.post-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
+}
+
+.post-header h1 {
+    font-size: 2.8rem;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.post-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 1rem;
+    opacity: 0.95;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.post-meta span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-meta span:first-child::before {
+    content: '🆔';
+}
+
+.post-meta span:nth-child(2)::before {
+    content: '👤';
+}
+
+.post-details .post-content {
+    padding: 50px 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2d3748;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    position: relative;
+}
+
+.post-details .post-content::before {
+    content: '“';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4rem;
+    color: #e2e8f0;
+    font-family: Georgia, serif;
+}
+
+.post-details .post-content p {
+    margin: 0;
+    text-align: justify;
+    text-indent: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* עיצוב חלק תחתון של הפוסט */
+.post-bottom {
+    display: flex;
+    gap: 30px;
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-top: 1px solid #cbd5e0;
+    position: relative;
+}
+
+.post-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.comments-actions {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.add-comment-section {
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-top: 1px solid #cbd5e0;
+    position: relative;
+}
+
+.add-comment-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+/* אנימציות */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(180deg); }
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .post-details {
+        margin: 10px;
+        border-radius: 20px;
+    }
+    
+    .post-header {
+        padding: 30px 25px;
+    }
+    
+    .post-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .post-details .post-content {
+        padding: 30px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .post-bottom {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    .add-comment-section {
+        padding: 25px 20px;
+    }
+    
+    .comments-actions {
+        flex: none;
+        justify-content: center;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .post-meta span {
+        align-self: flex-start;
+    }
+}

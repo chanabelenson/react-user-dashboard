@@ -1,0 +1,59 @@
+.not-found-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.not-found-card {
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    max-width: 450px;
+}
+
+.not-found-title {
+    font-size: 4rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.not-found-subtitle {
+    margin-bottom: 20px;
+}
+
+.not-found-text {
+    color: #666;
+}
+
+.not-found-button-group {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.not-found-back-button {
+    padding: 12px 24px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.not-found-home-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
